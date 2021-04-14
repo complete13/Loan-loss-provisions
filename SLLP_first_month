@@ -1,0 +1,24 @@
+import pandas as pd
+import numpy as np
+
+scenario_1 = pd.read_excel('DCF_kalkulacija.xlsx', sheet_name = 'Scenario 1')
+
+test_list = scenario_1['Rb']
+test_list1 = scenario_1['Naplaćena glavnica']
+test_list2 = scenario_1['Glavnica']
+test_list3 = scenario_1['Preostala nenaplaćena glavnica']
+rate = 3
+
+
+res_list0 = []
+
+for i in range(0, len(test_list)):
+        res_list0.append(test_list1[i]/(1+rate/100)**(test_list[i]/12))
+
+# loan los provisions for first month
+sllp1 = [test_list3[0] - sum(res_list0)]
+
+
+
+# scenario_1['Loan Loss Provisions'] = sllp_total[sllp1, sllp2, ........, sllp24]
+
