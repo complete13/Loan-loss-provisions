@@ -19,6 +19,6 @@ for i in range(0, len(test_list)):
 sllp1 = [test_list3[0] - sum(res_list0)]
 
 
-# with new list plan is to create new column in table with monthly loan loss provision
+# new list will show data which will be added to "scenario 1" as new column which will represent monthly loan loss provision
 # scenario_1['Loan Loss Provisions'] = sllp_total[sllp1, sllp2, ........, sllp24]
 
